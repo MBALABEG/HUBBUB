@@ -5,7 +5,7 @@ class CreateHubs < ActiveRecord::Migration
       t.string :twitter_ids
       t.string :instagram_ids
       t.string :description
-      t.user :references
+      t.references :user
 
       t.timestamps null: false
     end
