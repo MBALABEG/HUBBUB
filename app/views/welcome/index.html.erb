@@ -8,29 +8,21 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">Search Hashtag</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading effect2">HUBBUB</h1>
-            <p class="lead">Easily create beautiful hubs for your party's hashtag.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
+            <%= form_tag("/hubs/new", method: "get") do %>
+              <%= text_field_tag "hashtag", nil, placeholder: "HUBBUB", class: "main-form" %>
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
+            <%= submit_tag "Search", class: "test" %>
+            <% end %>
           </div>
 
         </div>
