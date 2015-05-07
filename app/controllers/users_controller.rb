@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params) # creates a new user with name, email, and password
 	end
-	private
+	private 
 	def user_params # required parameters for new users
 		params.require(:user).permit(:name, :email. :password)
 	end
