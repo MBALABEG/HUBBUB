@@ -17,9 +17,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # downloads bootstrap
 gem 'bootstrap-sass', '~> 3.3.4'
 
-# use Factory Girl gem to create models for rspec testing
-gem 'factory_girl'
-
 # use figaro gem to hide things
 gem 'figaro'
 
@@ -53,7 +50,8 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+# use Factory Girl gem to create models for rspec testing
+gem 'factory_girl_rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
