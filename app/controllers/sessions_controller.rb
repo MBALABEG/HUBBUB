@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 			redirect_to '/' #have not yet defined the redirects, other than root
 		else
 			redirect_to '/'
+		end
 	end
 	def destroy
 		session[:user_id] = nil
