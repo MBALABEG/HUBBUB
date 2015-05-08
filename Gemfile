@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 
 # use Factory Girl gem to create models for rspec testing
-gem 'factory_girl'
+gem 'factory_girl_rails'
 
 # use figaro gem to hide things
 gem 'figaro'

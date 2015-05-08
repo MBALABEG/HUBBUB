@@ -1,0 +1,7 @@
+<h1>Clippers</h1>
+<% @insta.each do |photo|%>
+    <%= image_tag photo.images.low_resolution.url %>
+<% end %>
+<% @twitter.each do |tweet| %>
+    <p><%= tweet.text %></p>
+<% end %>
