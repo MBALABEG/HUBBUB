@@ -263,7 +263,10 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
+<<<<<<< HEAD
+=======
   factory_girl
+>>>>>>> 3a6a4520a0d1ed3fa6cdd571b9f6171a248224d1
   factory_girl_rails
   figaro
   guard

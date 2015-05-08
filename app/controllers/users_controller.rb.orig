@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+=======
 	def new
 		@user = User.new
 	end
@@ -13,4 +15,5 @@ class UsersController < ApplicationController
 	def user_params # users are required to have these attributes
 		require(:user).permit(:name, :email, :password)
 	end
+>>>>>>> 3a6a4520a0d1ed3fa6cdd571b9f6171a248224d1
 end
