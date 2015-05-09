@@ -1,0 +1,42 @@
+
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Sign Up</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                  <li class="active"><a href="">Sign up</a></li>
+                  <li class="active"><a href="">Log in</a></li> 
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+        
+            <div class= "box">
+
+              <%= form_for (@user) do |f| %>
+            
+                  Name:<%= f.text_field :name, class: "black_text" %><br>
+                  Email:<%= f.text_field :email, class: "black_text" %><br>
+                  Password:<%= f.password_field :password, class: "black_text" %>
+                   
+                <br>
+                  <%= f.submit 'Submit', class: "submit" %>
+
+              <% end %>
+            </div>
+         
+
+        
+        </div>
+      </div>
+
+    </div>
