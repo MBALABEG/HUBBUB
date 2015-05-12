@@ -7,10 +7,17 @@ class HubsController < ApplicationController
     end
 
     def create
-        store = []
-        @insta.each do |gram|
-            store.push(gram.id)
+        @hub = Hub.new
+        @hub.instagram_ids = params[:instagrams]
+        if @hub.save
+            redirect_to "/"
+        else
+            render "new"
         end
+    end
+
+    def show
+
     end
 
 end
