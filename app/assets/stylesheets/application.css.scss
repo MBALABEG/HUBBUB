@@ -215,3 +215,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6928', end
     width: 700px;
   }
 }
+
+.submit {
+  border: 3px solid orange;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.black_text {
+  color: black;
+  border: 3px solid purple;
+  border-radius: 5px;
+}
+
+.box {
+  height: 500px;
+  width: 800px;
+  border-radius: 20px;
+  background-color: grey;
+  
+}
