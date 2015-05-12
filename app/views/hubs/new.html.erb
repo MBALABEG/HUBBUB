@@ -6,4 +6,7 @@
     <p><%= tweet.text %></p>
 <% end %>
 
-<%= @store %>
+<%= form_tag('/hubs', method: :post) do %>
+<%= hidden_field_tag 'instagrams', @insta %>
+<%= submit_tag "Submit" %>
+<% end %>
