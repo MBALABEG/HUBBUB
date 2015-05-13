@@ -16,10 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # downloads bootstrap
 gem 'bootstrap-sass', '~> 3.3.4'
-
-# use Factory Girl gem to create models for rspec testing
-gem 'factory_girl_rails'
-
 # use figaro gem to hide things
 gem 'figaro'
 
@@ -56,7 +52,8 @@ group :development, :test do
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
-
+  # devise gem for user authentication
+  gem 'devise'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

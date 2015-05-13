@@ -1,0 +1,42 @@
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Log in</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                  <li class="active"><a href="">Sign up</a></li>
+                  <li class="active"><a href="">Log in</a></li> 
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+        
+            <div class= "box">
+              <div id="sign_up_box">
+              <p>By creating an account on HUBBUB, you'll get to save your favorite boards and share them with all your friends. Sign Up today!</p>
+              </div>
+				<%= params[:email] %>
+
+				<%= form_tag('/login', method: :post) do %>
+
+					Email:<%= text_field_tag :email, nil, class: "black_text" %><br>
+					Password:<%= password_field_tag :password, nil, class: "black_text"%>
+	
+				<%= submit_tag "Log in" %>
+
+				<% end %>
+            </div>
+         
+              <p>HUBBUB 2015</p>
+        
+        </div>
+      </div>
+
+    </div>
