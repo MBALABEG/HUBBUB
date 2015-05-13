@@ -21,12 +21,15 @@
           
         
             <div class= "box">
-
+              <div id="sign_up_box">
+              <p>By creating an account on HUBBUB, you'll get to save your favorite boards and share them with all your friends. Sign Up today!</p>
+              </div>
               <%= form_for (@user) do |f| %>
             
                   Name:<%= f.text_field :name, class: "black_text" %><br>
                   Email:<%= f.text_field :email, class: "black_text" %><br>
-                  Password:<%= f.password_field :password, class: "black_text" %>
+                  Password:<%= f.password_field :password, class: "black_text" %><br>
+                  Password Confirmation:<%= f.password_field :password_confirmation, class: "black_text" %>
                    
                 <br>
                   <%= f.submit 'Submit', class: "submit" %>
@@ -34,7 +37,7 @@
               <% end %>
             </div>
          
-
+              <p>HUBBUB 2015</p>
         
         </div>
       </div>

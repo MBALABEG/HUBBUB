@@ -13,6 +13,6 @@ class UsersController < ApplicationController
 	end
 	private
 	def user_params # users are required to have these attributes
-		params.require(:user).permit(:name, :email, :password)
+		params.require(:user).permit(:name, :email, :password, :password_confirmation)
 	end
 end
