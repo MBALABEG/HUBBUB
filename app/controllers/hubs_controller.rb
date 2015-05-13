@@ -1,14 +1,15 @@
 class HubsController < ApplicationController
+    include HubsHelper
 
     def new
-        tag = params[:hashtag]
-        @insta = Instagram.tag_recent_media(tag)
-        @twitter = $twitter_client.search("#" + tag).take(20)
+        @insta = instagramHelper
+        @twitter = twitterHelper
+        @hub = Hub.new
     end
 
     def create
-        @hub = Hub.new
-        @hub.instagram_ids = params[:instagrams]
+        @hub = Hub.new(social_params)
+        @hub.social_ids = params[:social_ids]
         if @hub.save
             redirect_to "/"
         else
@@ -17,7 +18,12 @@ class HubsController < ApplicationController
     end
 
     def show
+    end
 
+    private
+
+    def social_params
+        params.require(:hub).permit(:social_ids)
     end
 
 end

@@ -1,12 +1,23 @@
 <h1>#<%= params[:hashtag] %></h1>
+
+<%= @tag %>
+
 <% @insta.each do |photo|%>
     <%= image_tag photo.images.low_resolution.url %>
 <% end %>
+
 <% @twitter.each do |tweet| %>
     <p><%= tweet.text %></p>
 <% end %>
 
-<%= form_tag('/hubs', method: :post) do %>
-<%= hidden_field_tag 'instagrams', @insta %>
-<%= submit_tag "Submit" %>
-<% end %>
+
+<font color="black">
+
+
+    <%= form_tag '/hubs' %>
+        <% @insta.each do |photo|%>
+            <%= text_field_tag "social_ids", photo.images.low_resolution.url %>
+        <% end %>
+    <%= submit_tag "Submit" %>
+
+</font>
