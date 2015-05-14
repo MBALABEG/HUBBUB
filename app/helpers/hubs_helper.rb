@@ -21,4 +21,12 @@ module HubsHelper
         @instaArray
     end
 
+    def tweetArrayHelper(receivedTweet)
+        @tweetArray = []
+        receivedTweet.each do |tweet|
+            tweet_id = tweet.text
+            @tweetArray.push(tweet_id)
+        end
+        @tweetArray
+    end
 end
