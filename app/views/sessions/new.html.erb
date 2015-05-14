@@ -1,5 +1,3 @@
-
-
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -8,7 +6,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Sign Up</h3>
+              <h3 class="masthead-brand">Log in</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="/">Home</a></li>
@@ -24,17 +22,16 @@
               <div id="sign_up_box">
               <p>By creating an account on HUBBUB, you'll get to save your favorite boards and share them with all your friends. Sign Up today!</p>
               </div>
-              <%= form_for (@user) do |f| %>
-            
-                  Name:<%= f.text_field :name, class: "black_text" %><br>
-                  Email:<%= f.text_field :email, class: "black_text" %><br>
-                  Password:<%= f.password_field :password, class: "black_text" %><br>
-                  Password Confirmation:<%= f.password_field :password_confirmation, class: "black_text" %>
-                   
-                <br>
-                  <%= f.submit 'Submit', class: "submit" %>
+				<%= params[:email] %>
 
-              <% end %>
+				<%= form_tag('/login', method: :post) do %>
+
+					Email:<%= text_field_tag :email, nil, class: "black_text" %><br>
+					Password:<%= password_field_tag :password, nil, class: "black_text"%>
+	
+				<%= submit_tag "Log in" %>
+
+				<% end %>
             </div>
          
               <p>HUBBUB 2015</p>
