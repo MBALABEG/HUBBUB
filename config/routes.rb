@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post "/users" => "users#create"
 
       get "sessions/login" => "sessions#new"
+      get "/logout" => "sessions#destroy"
       post "/login" => "sessions#create"
 
     resources :hubs, :only => [:new, :create, :show]

@@ -1,8 +1,21 @@
 <div class="container">
 
 <div class="row topbar">
-    <div class="col-sm-2 col-sm-offset-3"><%= link_to "Sign Up", '/signup' %></div>
-    <div class="col-sm-2"><%= link_to "Log In", '/' %></div>
+
+    <div class="col-sm-2 col-sm-offset-3">
+    	<% if current_user %>
+    		<%= link_to "Sign Out", "/logout" %>
+    	<% else %>
+    		<%= link_to "Sign Up", '/signup' %>
+		<% end %>
+	</div>
+    <div class="col-sm-2">
+	    <% if current_user %> <!-- if a user is logged in, the nav bar hides buttons -->
+		Welcome, <%= current_user.name %>
+		<% else %>
+	    <%= link_to "Log In", '/sessions/login' %>
+	    <% end %>
+    </div>
     <div class="col-sm-2"><%= link_to "Hubs", '/' %></div>
 </div>
             <%= form_tag("/hubs/new", method: "get") do %>
