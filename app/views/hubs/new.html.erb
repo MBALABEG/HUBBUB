@@ -14,10 +14,12 @@
 <font color="black">
 
 
-    <%= form_tag '/hubs' %>
-        <% @insta.each do |photo|%>
-            <%= text_field_tag "social_ids", photo.images.low_resolution.url %>
+    <%= form_for @hub do |f| %>
+        <% @gramIdsArray.each do |thingy| %>
+            <%= hidden_field_tag('social_ids[]', thingy.url) %>
         <% end %>
-    <%= submit_tag "Submit" %>
+            <%= submit_tag "Submit" %>
+
+    <% end%>
 
 </font>
