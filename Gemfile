@@ -57,6 +57,10 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
 
+   #add validation-association matchers
+  gem 'shoulda-matchers', require: false
+
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
