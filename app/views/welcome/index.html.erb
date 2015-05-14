@@ -1,5 +1,12 @@
+<div class="container">
 
+<div class="row topbar">
+    <div class="col-sm-2 col-sm-offset-3"><%= link_to "Sign Up", '/signup' %></div>
+    <div class="col-sm-2"><%= link_to "Log In", '/' %></div>
+    <div class="col-sm-2"><%= link_to "Hubs", '/' %></div>
+</div>
 
+<<<<<<< HEAD
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -20,16 +27,14 @@
           </div>
           <div class="inner cover">
             
+=======
+<div class="search">
+>>>>>>> homepage_style
             <%= form_tag("/hubs/new", method: "get") do %>
               <%= text_field_tag "hashtag", nil, placeholder: "HUBBUB", class: "main-form" %>
-            <%= submit_tag "Search", class: "submit" %>
+              <br/>
+            <%= submit_tag "SEARCH", class: "submit" %>
             <% end %>
-           
+
             <h3>A hub for all your events</h3>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+</div>
