@@ -89,25 +89,31 @@ body {
   border-radius: 5px;
   padding: 15px;
   font-size:2em;
-  color: white;
   background: transparent;
   font-family: Outage;
   color: black;
 
 }
 
+.submit:hover {
+  background-color: lightgrey;
+  color: orange;
+}
+
 .black_text {
   color: black;
-  border: 3px solid purple;
+  border: 3px solid #D65B53;
   border-radius: 5px;
   border-style: groove;
+  height: 30px;
+  width: 170px;
 }
 
 .box {
   height: 500px;
   width: 800px;
-  border-radius: 20px;
-  background-color: grey;
+  border-radius: 15px;
+  background-color: #B47CB8;
   margin: 0 auto;
 }
 
@@ -120,4 +126,30 @@ body {
 .search {
   margin-top: 70px;
 }
+.name {
+  position: relative;
+  left: -25px;
+}
 
+
+.email {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  left: -25px;
+}
+
+.password {
+  position: relative;
+  left: -45px;
+}
+
+.password_con {
+  position: relative;
+  left: -105px;
+  margin-top: 30px;
+}
+
+#red {
+  color: red;
+}
