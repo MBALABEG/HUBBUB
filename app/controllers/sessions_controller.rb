@@ -10,10 +10,13 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
 			redirect_to '/'
-		else
-			redirect_to '/sessions/login'
+		else 
+		#	user && user.authenticate(params[:password]) !== user
+			flash[:error] = "Incorrect password or email"
+			render 'new'
 		end
 	end
+
 	def destroy
 		session[:user_id] = nil
 		redirect_to '/'

@@ -6,22 +6,25 @@ class HubsController < ApplicationController
         @gramIdsArray = instaArrayHelper(@instagram)
 
         @twitter = twitterHelper
+        @tweetIdsArray = tweetArrayHelper(@twitter)
         @hub = Hub.new
     end
 
     def create
         @hub = Hub.new(social_params)
-        @hub.social_ids = params[:social_ids].to_a
+        instagram = params[:social_ids].to_a
+        tweet = params[:social_ids2].to_a
+        @hub.social_ids = tweet + instagram
 
         if @hub.save
-            redirect_to "/"
+            redirect_to "/hubs/" + "#{@hub.id}"
         else
             render "new"
         end
     end
 
     def show
-        @hub = Hub.find(params[:id])
+        # @hub = Hub.find(params[:id])
     end
 
     private

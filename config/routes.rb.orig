@@ -1,0 +1,13 @@
+Rails.application.routes.draw do
+
+  root "welcome#index"
+  get "/hubs/new" => "hubs#new"
+<<<<<<< HEAD
+  get "/hubs/:id" => "hubs#show" as: :hub
+  post "/hubs" => "hubs#create"
+=======
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+>>>>>>> 3cc1f1367e8f845cf8ac1ac4cc3e29a59923e315
+
+end

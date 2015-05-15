@@ -1,35 +1,28 @@
+<div class="container">
 
+<div class="row topbar">
 
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Search Hashtag</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li class="active"><a href="/users/signup">Sign up</a></li>
-                  <li class="active"><a href="/sessions/login">Log in</a></li> 
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="inner cover">
-            
+    <div class="col-sm-2 col-sm-offset-3">
+    	<% if current_user %>
+    		<%= link_to "Sign Out", "/logout" %>
+    	<% else %>
+    		<%= link_to "Sign Up", '/signup' %>
+		<% end %>
+	</div>
+    <div class="col-sm-2">
+	    <% if current_user %> <!-- if a user is logged in, the nav bar hides buttons -->
+		Welcome, <%= current_user.name %>
+		<% else %>
+	    <%= link_to "Log In", '/sessions/login' %>
+	    <% end %>
+    </div>
+    <div class="col-sm-2"><%= link_to "Hubs", '/' %></div>
+</div>
             <%= form_tag("/hubs/new", method: "get") do %>
               <%= text_field_tag "hashtag", nil, placeholder: "HUBBUB", class: "main-form" %>
-            <%= submit_tag "Search", class: "submit" %>
+              <br/>
+            <%= submit_tag "SEARCH", class: "submit" %>
             <% end %>
-           
+
             <h3>A hub for all your events</h3>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+</div>

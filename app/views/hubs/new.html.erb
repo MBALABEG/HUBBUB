@@ -18,6 +18,9 @@
         <% @gramIdsArray.each do |thingy| %>
             <%= hidden_field_tag('social_ids[]', thingy.url) %>
         <% end %>
+        <% @tweetIdsArray.each do |tweet| %>
+            <%= hidden_field_tag('social_ids2[]', tweet) %>
+        <% end %>
             <%= submit_tag "Submit" %>
 
     <% end%>
