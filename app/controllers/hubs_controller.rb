@@ -24,7 +24,7 @@ class HubsController < ApplicationController
     end
 
     def show
-        @hub = Hub.find(params[:id])
+        # @hub = Hub.find(params[:id])
     end
 
     private
