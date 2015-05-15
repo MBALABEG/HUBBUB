@@ -7,7 +7,7 @@ require 'shoulda/matchers'
 
 describe User do
 
-  # I am using both factoryGirl and the let to create a in memory.
+  # I am using both factoryGirl and the let to create a user in memory.
   # We do not have to.
   #
   let!(:user_without_email){User.new(name: "Test")}
@@ -22,11 +22,11 @@ describe User do
       expect(user.name).to_not be_nil
     end
 
-    it "has an email" do
+    it "responds to an email" do
       expect(subject).to respond_to(:email)
     end
 
-    it "has a name" do
+    it "responds to a name" do
       expect(subject).to respond_to(:name)
     end
 

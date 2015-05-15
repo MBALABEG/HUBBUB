@@ -30,7 +30,7 @@ class HubsController < ApplicationController
     private
 
     def social_params
-        params.permit(:social_ids)
+        params.permit(:social_ids, :title, :description)
     end
 
 end

@@ -9,7 +9,7 @@ module HubsHelper
     end
 
     def twitterHelper
-        @twitter = $twitter_client.search("#" + tagParamsHelper).take(20)
+        @twitter = $twitter_client.search("#" + tagParamsHelper).take(19)
     end
 
     def instaArrayHelper(receivedInstagram)

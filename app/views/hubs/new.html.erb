@@ -1,4 +1,10 @@
 <h1>#<%= params[:hashtag] %></h1>
+<font color="black">
+
+DESCRIPTION:
+   <%= form_for @hub do |f| %>
+    <%= text_area_tag('description') %>
+
 
 <%= @tag %>
 
@@ -11,18 +17,17 @@
 <% end %>
 
 
-<font color="black">
 
 
-    <%= form_for @hub do |f| %>
-        <% @gramIdsArray.each do |thingy| %>
-            <%= hidden_field_tag('social_ids[]', thingy.url) %>
+
+        <% @gramIdsArray.each do |insta| %>
+            <%= hidden_field_tag('social_ids[]', insta.url) %>
         <% end %>
         <% @tweetIdsArray.each do |tweet| %>
             <%= hidden_field_tag('social_ids2[]', tweet) %>
         <% end %>
+           <%= hidden_field_tag('title', params[:hashtag]) %>
             <%= submit_tag "Submit" %>
-
     <% end%>
 
 </font>

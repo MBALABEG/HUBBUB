@@ -10,7 +10,7 @@ FactoryGirl.define do
     title "this is a new hub"
     description "This is a test hub"
      user_id 4
-     twitter_ids "twitter_id"
-     instagram_ids "instagram_id"
+     social_ids  "twitter_id"
+
   end
 end
