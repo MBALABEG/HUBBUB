@@ -1,52 +1,29 @@
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Log in</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="/">Home</a></li>
-                  <li class="active"><a href="/signup">Sign up</a></li>
- 
-                </ul>
-              </nav>
-            </div>
-          </div>
-      
-
-
-            <div class= "box">
-
-            <% flash.each do |key, value| %>
-            <div id="red">
-               <div class="alert alert-error<%= key %>"><%= value %></div>
-            </div>
-              <% end %>
-
-              <div id="sign_up_box">
-                <p id="p_text">By creating an account on HUBBUB, you'll get to save your favorite boards and share them with all your friends. Sign Up today!</p>
-              </div>
-      				
-
-      				<%= form_tag('/login', method: :post) do %>
-                <div class="email">
-      					Email: <%= text_field_tag :email, nil, class: "black_text" %><br>
-                </div>
-                <div class="password">
-      					Password: <%= password_field_tag :password, nil, class: "black_text"%><br>
-      	       </div>
-      				<%= submit_tag "Log in", class: "submit" %>
-
-      				<% end %>
-            </div>
-         
-              <p>HUBBUB 2015</p>
-        
-        </div>
-      </div>
-
+<div class= "box">
+  <% flash.each do |key, value| %>
+    <div id="red">
+        <div class="alert alert-error<%= key %>"><%= value %></div>
     </div>
+  <% end %>
+
+    <div id="sign_up_box">
+      <p id="p_text">By creating an account on HUBBUB, you'll get to save your favorite boards and share them with all your friends. Sign Up today!</p>
+    </div>
+  				
+		 <%= form_tag('/login', method: :post) do %>
+        <div class="email">
+				Email: <%= text_field_tag :email, nil, class: "black_text" %><br>
+        </div>
+        <div class="password">
+				Password: <%= password_field_tag :password, nil, class: "black_text"%><br>
+       </div>
+		<%= submit_tag "Log in", class: "submit" %>
+
+			<% end %>
+    </div>
+     
+          <p>HUBBUB 2015</p>
+    
+    </div>
+  </div>
+
+</div>
