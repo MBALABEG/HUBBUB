@@ -17,7 +17,7 @@ class HubsController < ApplicationController
         @hub.social_ids = tweet + instagram
 
         if @hub.save
-            redirect_to "/"
+            redirect_to "/hubs/" + "#{@hub.id}"
         else
             render "new"
         end
